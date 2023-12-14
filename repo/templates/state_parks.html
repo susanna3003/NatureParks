@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Parks of North Carolina</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+  <header>
+    <h1>Nature Parks of North Carolina</h1>
+    <h2>State Parks</h2>
+  <nav>
+    <a href="{{ url_for('index') }}">Home</a> |
+    <a href="{{ url_for('rec_areas') }}">Recreational Areas</a> |
+    <a href="{{ url_for('nat_areas') }}">Natural Areas</a> |
+    <a href="{{ url_for('lakes') }}">Lakes</a> |
+    <a href="#">Rivers</a> |
+    <a href="#">Trails</a>
+  </nav>
+</header>
+
+  <section>
+    <main>
+      <div class="section-container">
+        <h2>State Parks</h2>
+        <p>Search State Parks by Region</p>
+          <form method="POST" action="">
+            <label for="regionDropdown">Select a Region:</label>
+            <select id="regionDropdown" name="region">
+              <option value="Coast">Coast</option>
+              <option value="Coastal Plain">Coastal Plain</option>
+              <option value="Piedmont">Piedmont</option>
+              <option value="Mountains">Mountains</option>
+            </select>
+    
+            <input type="submit" name ="action" value="Get Parks">
+            <br>
+            <br>
+            {% for park in parks %}
+                <input type="checkbox" name="parks" value="{{ park }}">{{ park }}<br>
+            {% endfor %}
+            <br>
+            {{title}}
+            <br>
+            {{ parks_df|safe }}
+            <br>
+            <input type="submit"  name="action" value="Select Parks">
+        </form>
+
+      </div>
+    </main>
+  </section>
+
+  <footer>
+    Susanna Quayle Advanced Python 2023
+  </footer>
+
+</body>
+
+</html>

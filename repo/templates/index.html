@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature Parks of North Carolina</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+  <header>
+    <h1>Nature Parks of North Carolina</h1>
+  <nav>
+    <a href="{{ url_for('state_parks') }}">State Parks</a> |
+    <a href="{{ url_for('rec_areas') }}">Recreational Areas</a> |
+    <a href="{{ url_for('nat_areas') }}">Natural Areas</a> |
+    <a href="{{ url_for('lakes') }}">Lakes</a> |
+    <a href="#">Rivers</a> |
+    <a href="#">Trails</a>
+  </nav>
+  </header>
+
+  <img src="{{ url_for('static', filename='pilot_mt.jpg') }}" alt="Pilot Mountain, NC" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+
+  <section>
+    <main>
+      <div class="section-container">
+        <h2>North Carolina Regions</h2>
+        <p>From coastal paradises to mountainous vistas, North Carolina's four regions collectively paint a picture of diverse and captivating natural landscapes.</p>
+      </div>
+
+      <div class="column-container">
+        <div class="column">
+          <h2>Coast</h2>
+          <p>Along the Atlantic, the Outer Banks steal the spotlight with pristine beaches, historic lighthouses, and unique coastal ecosystems.</p>
+        </div>
+    
+        <div class="column">
+          <h2>Coastal Plains</h2>
+          <p>This region offers a blend of sandy shores and fertile plains, featuring attractions like Cape Hatteras National Seashore and diverse maritime forests.</p>
+        </div>
+    
+        <div class="column">
+          <h2>Piedmont</h2>
+          <p>Known for its rolling hills, the Piedmont region hosts the vibrant city of Charlotte and the historic city of Raleigh, surrounded by a mix of urban amenities and natural charm.</p>
+        </div>
+    
+        <div class="column">
+          <h2>Mountains</h2>
+          <p>The western part of the state showcases the awe-inspiring Blue Ridge Mountains and the Great Smoky Mountains National Park, providing scenic landscapes and outdoor adventures.</p>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <footer>
+    Susanna Quayle Advanced Python 2023
+  </footer>
+
+</body>
+
+</html>
